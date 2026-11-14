@@ -22,7 +22,7 @@ include(FetchContent)
 FetchContent_Declare(
     libbinio
     GIT_REPOSITORY https://github.com/adplug/libbinio.git
-    GIT_TAG master
+    GIT_TAG 3baed731da6b44883c6820132fb1d2a44abc0939
 )
 # Disable libbinio tests and examples if possible
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
@@ -32,7 +32,7 @@ FetchContent_MakeAvailable(libbinio)
 FetchContent_Declare(
     adplug
     GIT_REPOSITORY https://github.com/adplug/adplug.git
-    GIT_TAG master
+    GIT_TAG 3d9457ac91121302a752577b2bf063b4aea202b8
 )
 # Disable adplug tests/examples to speed up build
 set(BUILD_ADPLAY OFF CACHE BOOL "" FORCE)
@@ -55,7 +55,7 @@ FetchContent_MakeAvailable(adplug)
 FetchContent_Declare(
     munt
     GIT_REPOSITORY https://github.com/munt/munt.git
-    GIT_TAG master
+    GIT_TAG f5b968c4faf180c7e687346a4e0ad426eee5f2af
     SOURCE_SUBDIR mt32emu
 )
 set(libmt32emu_SHARED TRUE CACHE BOOL "" FORCE)
