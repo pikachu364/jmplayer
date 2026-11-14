@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^CMakeLists\\.txt$/"
+      ],
+      "matchStrings": [
+        "GIT_REPOSITORY\\s+https://github\\.com/adplug/libbinio\\.git\\s+GIT_TAG\\s+(?<currentDigest>[0-9a-f]{40})"
+      ],
+      "currentValueTemplate": "master",
+      "depNameTemplate": "adplug/libbinio",
+      "packageNameTemplate": "https://github.com/adplug/libbinio",
+      "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^CMakeLists\\.txt$/"
+      ],
+      "matchStrings": [
+        "GIT_REPOSITORY\\s+https://github\\.com/adplug/adplug\\.git\\s+GIT_TAG\\s+(?<currentDigest>[0-9a-f]{40})"
+      ],
+      "currentValueTemplate": "master",
+      "depNameTemplate": "adplug/adplug",
+      "packageNameTemplate": "https://github.com/adplug/adplug",
+      "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^CMakeLists\\.txt$/"
+      ],
+      "matchStrings": [
+        "GIT_REPOSITORY\\s+https://github\\.com/munt/munt\\.git\\s+GIT_TAG\\s+(?<currentDigest>[0-9a-f]{40})"
+      ],
+      "currentValueTemplate": "master",
+      "depNameTemplate": "munt/munt",
+      "packageNameTemplate": "https://github.com/munt/munt",
+      "datasourceTemplate": "git-refs"
+    }
+  ]
+}
